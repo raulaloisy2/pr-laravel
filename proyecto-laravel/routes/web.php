@@ -35,4 +35,4 @@ Route::get('/dividir/{num1}/{num2}', [MathController::class, 'divide'])->where([
 //Saludo
 Route::get('/saludar/{nombre}/{apellido?}', [GreetingController::class, 'saludar'])->where('nombre', '[A-Za-z]+')->where('apellido', '[A-Za-z]+');
 
-Route::get('/saludo', [ViewController::class, 'showGreeting']);
+Route::get('/saludo', [showGreeting::class, 'showGreeting']);
