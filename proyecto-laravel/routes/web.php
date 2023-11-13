@@ -5,6 +5,7 @@ use App\Http\Controllers\MathController;
 use App\Http\Controllers\GreetingController;
 use App\Http\Controllers\ViewController;
 use App\Http\Controllers\showGreeting;
+use App\Http\Controllers\CarController;
 
 
 
@@ -36,3 +37,7 @@ Route::get('/dividir/{num1}/{num2}', [MathController::class, 'divide'])->where([
 Route::get('/saludar/{nombre}/{apellido?}', [GreetingController::class, 'saludar'])->where('nombre', '[A-Za-z]+')->where('apellido', '[A-Za-z]+');
 
 Route::get('/saludo', [showGreeting::class, 'showGreeting']);
+
+//Carro
+Route::get('/carro', [CarController::class, 'index']);
+Route::get('/carro/{id}', [CarController::class, 'show']);
